@@ -1,0 +1,56 @@
+.floatingContainer {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 2000;
+}
+
+/* Floating Button Base */
+.floatingBtn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* WhatsApp Styling */
+.whatsapp {
+  background: #25d366;
+  border-color: #1da851;
+}
+
+/* Phone Styling */
+.phone {
+  background: linear-gradient(135deg, #bfa136, #ffd700);
+  border-color: #bfa136;
+}
+
+/* Hover Effects */
+.floatingBtn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(191, 161, 54, 0.6);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .floatingContainer {
+    bottom: 15px;
+    right: 15px;
+  }
+  .floatingBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

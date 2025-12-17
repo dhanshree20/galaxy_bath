@@ -1,0 +1,235 @@
+/* ========================== 
+BATH SOLUTIONS SECTION 
+========================== */
+.valuesSection {
+  padding: 100px 20px;
+  background: #0e0e0e; /* deep black background */
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* ------- CONTAINER ------- */
+.container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* ------- LEFT ------- */
+.left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #ffffff;
+  position: relative;
+  line-height: 1.2;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #f4e19e);
+  border-radius: 2px;
+}
+
+/* ------- ACCORDION ------- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordionItem {
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordionItem:hover {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.accordionHeader h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f5f5f5;
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+.accordionHeader span {
+  font-size: 24px;
+  color: #d4af37;
+  transition: all 0.3s ease;
+}
+
+.active .accordionHeader span {
+  transform: rotate(45deg);
+  color: #fff;
+}
+
+.accordionContent {
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.accordionContent p {
+  margin-top: 10px;
+  color: #d9d9d9;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ------- RIGHT IMAGE ------- */
+.right {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+  transition: all 0.5s ease;
+}
+
+.image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+}
+
+/* =================== RESPONSIVE BREAKPOINTS =================== */
+
+/* --- Large Screens (1440px–2000px) --- */
+@media (min-width: 1440px) {
+  .container {
+    gap: 80px;
+  }
+  .heading {
+    font-size: 3.5rem;
+  }
+  .image {
+    max-width: 650px;
+  }
+}
+
+/* --- Laptops & Tablets Landscape --- */
+@media (max-width: 1100px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .image {
+    max-width: 480px;
+  }
+}
+
+/* --- Tablets Portrait (768px–1024px) --- */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .accordionHeader h3 {
+    font-size: 17px;
+  }
+
+  .image {
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* --- Mobiles (Below 600px) --- */
+@media (max-width: 600px) {
+  .valuesSection {
+    padding: 60px 15px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .accordionItem {
+    padding: 15px 0;
+  }
+
+  .accordionHeader h3 {
+    font-size: 16px;
+  }
+
+  .accordionHeader span {
+    font-size: 20px;
+  }
+
+  .accordionContent p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .image {
+    border-radius: 10px;
+    max-width: 100%;
+  }
+}
+
+/* --- Small Mobiles (Below 400px) --- */
+@media (max-width: 400px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .accordionHeader h3 {
+    font-size: 15px;
+  }
+
+  .accordionHeader span {
+    font-size: 18px;
+  }
+
+  .accordionItem {
+    padding: 12px 0;
+  }
+}
